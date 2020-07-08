@@ -15,25 +15,24 @@
     <select v-model="holding">
       <option v-for="filter in filters">{{ filter }}</option>
     </select>
-    <ul>
+    <ul class="exists">
       <book-item
         v-for='book in filteredBooks'
         :key='book.id'
         :book='book'
       ></book-item>
     </ul>
-    </hr>
     <br>
     <hr>
-    <book-form @addBook='appendBook(bookData)'></book-form>
+    <book-form @addBook='appendBook'></book-form>
   </div>
 </template>
 
 <script>
-import _ from 'lodash'
+import _ from 'lodash';
 
-import BookItem from './BookItem'
-import BookForm from './BookForm'
+import BookItem from './BookItem';
+import BookForm from './BookForm';
 
 export default {
   name: 'BookList',

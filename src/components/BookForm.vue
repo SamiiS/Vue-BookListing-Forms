@@ -20,23 +20,32 @@
       placeholder="Book Author"
     >
     <div>
-      <label for="finishedReading">Finished Reading</label>
-      <input
-        v-model="bookData.finishedReading"
-        type="checkbox"
-      >
-      <label for="borrowed">borrowed</label>
-      <input
-        v-model="bookData.ownership"
-        type="radio"
-        value="borrowed"
-      >
-      <label for="bought">bought</label>
-      <input
-        v-model="bookData.ownership"
-        type="radio"
-        value="bought"
-      >
+      <label for="finishedReading">
+        Finished Reading
+        <input
+          v-model="bookData.finishedReading"
+          type="checkbox"
+          name="finishedReading"
+        >
+      </label>
+      <label for="borrowed">
+        borrowed
+        <input
+          v-model="bookData.ownership"
+          type="radio"
+          id="borrowed"
+          value="borrowed"
+        >
+      </label>
+      <label for="bought">
+        bought
+        <input
+          v-model="bookData.ownership"
+          type="radio"
+          id="bought"
+          value="bought"
+        >
+      </label>
     </div>
     <button
       type="submit"
